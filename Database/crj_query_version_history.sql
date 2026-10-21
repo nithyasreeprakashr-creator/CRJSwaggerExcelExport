@@ -1,14 +1,3 @@
-/*
-    CRJ SQL Query Version History
-    Run this script in SSMS against the SQL Server project database.
-
-    Notes:
-    - Stores query text and successful execution history in SQL Server only.
-    - Revert re-executes the selected historical query and creates a NEW version.
-    - Use only for trusted SQL scripts. Do not grant arbitrary users permission to execute arbitrary SQL.
-    - Submit one SQL batch per execution. Do not include GO, USE, or transaction-control statements
-      (BEGIN/COMMIT/ROLLBACK) inside @QueryText.
-*/
 SET ANSI_NULLS ON;
 SET QUOTED_IDENTIFIER ON;
 GO

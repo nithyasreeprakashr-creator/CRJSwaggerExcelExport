@@ -16,9 +16,6 @@ public class CrjController(
 {
     private bool IsSqlServer => string.Equals(configuration["Database:Provider"], "SqlServer", StringComparison.OrdinalIgnoreCase);
 
-	/// <summary>
-	/// Returns CRJ headers and their details from PostgreSQL.
-	/// </summary>
 	[HttpGet("records")]
 	public async Task<IActionResult> GetRecords(
 		CancellationToken cancellationToken)
@@ -83,10 +80,6 @@ public class CrjController(
 		return Ok(result);
 	}
 
-	/// <summary>
-	/// Downloads an Excel workbook containing only the four
-	/// requested sheets: WELFARE, HOUSING, TRAINING and LEGAL.
-	/// </summary>
 	[HttpGet("export/excel")]
 	[Produces(
 		"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")]
